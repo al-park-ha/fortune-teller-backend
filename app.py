@@ -85,6 +85,8 @@ def give_answer():
     if gender == "선택안함":
         gender = "누군가"
     mbti = data['mbti']
+    if mbti == "선택안함":
+        mbti = "mbti를 모르는 상황"
     birth_year = data['birth_year']
     birth_month = data['birth_month']
     birth_day = data['birth_day']
