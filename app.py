@@ -105,10 +105,17 @@ def give_answer():
                "'별자리'라는 말 없이 200자 내로 문장이 끝나도록 해주세요. "
                % (birth_year, birth_month, birth_day, mbti, gender, request_status_type, request_detail_type, gender, status_type),
         max_tokens=700,
-        temperature=0
+        temperature=0,
+        n=3
     )
-    return completion.get('choices')[0].get('text')
-    # return completion
+
+    sentences = completion.get('choices')[0].get('text').split('.')
+    sen_len = sentences.len()
+    ret = ""
+    for i in range(sen_len-2):
+        ret += sentences[i]
+
+    return ret
 
 
 if __name__ == '__main__':
