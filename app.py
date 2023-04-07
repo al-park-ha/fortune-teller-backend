@@ -9,7 +9,7 @@ import config
 
 app = Flask(__name__)
 CORS(app)
-openai.organization = "org-0DYWEhC6WTA27oVGeBLqkEMX"
+openai.organization = "org-0Rm3m6ytE7XiLdcnHPHdA1IS"
 openai.api_key = config.openai_key
 
 
@@ -115,7 +115,7 @@ def give_answer():
     ret = ""
     for i in range(sen_len-1):
         ret += sentences[i]
-        ret += "."
+        ret += ".\n"
 
     return ret
 
