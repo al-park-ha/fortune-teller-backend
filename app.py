@@ -110,9 +110,9 @@ def give_answer():
     )
 
     sentences = completion.get('choices')[0].get('text').split('.')
-    sen_len = sentences.len()
+    sen_len = len(sentences)
     ret = ""
-    for i in range(sen_len-2):
+    for i in range(sen_len-1):
         ret += sentences[i]
 
     return ret
