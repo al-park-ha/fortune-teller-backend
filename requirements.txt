@@ -8,3 +8,4 @@ flasgger == 0.9.5
 openai~=0.27.2
 gunicorn
 waitress~=2.1.2
+flask_cors

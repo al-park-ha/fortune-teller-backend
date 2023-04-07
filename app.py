@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 
+from flask_cors import CORS, cross_origin
 from flask import Flask, request
 from waitress import serve
 import openai
@@ -7,6 +8,7 @@ import openai
 import config
 
 app = Flask(__name__)
+CORS(app)
 openai.organization = "org-0DYWEhC6WTA27oVGeBLqkEMX"
 openai.api_key = config.openai_key
 
