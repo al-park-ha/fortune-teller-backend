@@ -103,7 +103,7 @@ def give_answer():
     completion = openai.Completion.create(
         model="text-davinci-003",
         prompt="%s년 %s월 %s일에 태어난 %s인 %s 사람이 %s %s "
-               "이 %s의 별자리와 mbti를 고려하여 장점을 칭찬해주고, %s에 관련해서 따뜻한 조언을 "
+               "이 %s의 별자리와 mbti를 고려하여 장점을 칭찬해주고, %s에 관련해서 어떻게 하면 행복해질지 따뜻한 조언을 써주되,"
                "'%s' 단어를 쓰지 말고, '%s' 단어도 쓰지 말고, '자리' 라는 말도 쓰지 않고 200자 내로 문장이 끝나도록 해주세요. "
                % (birth_year, birth_month, birth_day, mbti, gender, request_status_type, request_detail_type, gender, status_type, mbti, gender),
         max_tokens=700,
