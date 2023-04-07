@@ -115,7 +115,7 @@ def give_answer():
     ret = ""
     for i in range(sen_len-1):
         ret += sentences[i]
-        ret += ".\n"
+        ret += ".\n\n"
 
     return ret
 
