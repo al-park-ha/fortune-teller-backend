@@ -110,7 +110,7 @@ def give_answer():
         temperature=0
     )
 
-    sentences = completion.get('choices')[0].get('text').split('.')
+    sentences = completion.get('choices')[0].get('text').split('. ')
     sen_len = len(sentences)
     ret = ""
     for i in range(sen_len-1):
