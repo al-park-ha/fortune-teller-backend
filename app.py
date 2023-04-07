@@ -9,7 +9,7 @@ import config
 
 app = Flask(__name__)
 CORS(app)
-openai.organization = "org-0Rm3m6ytE7XiLdcnHPHdA1IS"
+openai.organization = "org-3Fl56tEsfLxfA1Wb5h5byRvf"
 openai.api_key = config.openai_key
 
 
